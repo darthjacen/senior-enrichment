@@ -7,6 +7,8 @@ import AllStudents from "./AllStudents";
 import SingleStudent from "./SingleStudent";
 import NewStudentForm from "./NewStudentForm";
 import NewCampusForm from "./NewCampusForm";
+import UpdateStudent from './UpdateStudent';
+import UpdateCampus from './UpdateCampus';
 import { HashRouter as Router, Route } from "react-router-dom";
 
 export default class Home extends Component {
@@ -38,6 +40,8 @@ export default class Home extends Component {
             />
             <Route exact path="/NewStudentForm" component={NewStudentForm} />
             <Route exact path="/NewCampusForm" component={NewCampusForm} />
+            <Route exact path="/Students/:StudentId/UpdateStudent" component={UpdateStudent} />
+            <Route exact path="/CampusList/:CampusId/UpdateCampus" component={UpdateCampus} />
           </div>
         </div>
       </Router>

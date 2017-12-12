@@ -33,11 +33,27 @@ apiRouter.delete("/CampusList/:CampusId", (req, res, next) => {
   });
 });
 
+apiRouter.put("/CampusList/:CampusId/UpdateCampus", (req, res, next) => {
+	Campus.findById(req.params.CampusId)
+	.then((toUpdate) => {
+		return toUpdate.update(req.body)
+	})
+	.catch(next)
+})
+
 apiRouter.post("/NewStudentForm", (req, res, next) => {
   Student.create(req.body)
     .then(newStudent => res.json(newStudent))
     .catch(next);
 });
+
+apiRouter.put("/Students/:StudentId/UpdateStudent", (req, res, next) => {
+	Student.findById(req.params.StudentId)
+	.then((toUpdate) => {
+		return toUpdate.update(req.body)
+	})
+	.catch(next)
+})
 
 apiRouter.delete("/Students/:StudentId", (req, res, next) => {
   Student.destroy({

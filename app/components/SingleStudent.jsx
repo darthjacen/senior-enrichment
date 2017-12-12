@@ -49,6 +49,11 @@ export default class SingleStudent extends Component {
                 Delete this Student forever?
               </button>
             </Link>
+            <div>
+            <Link to={`/Students/${StudentId}/UpdateStudent`}>
+            <button> Update Student? </button>
+            </Link>
+            </div>
           </div>
         </div>
       </div>

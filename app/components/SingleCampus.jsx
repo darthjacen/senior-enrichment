@@ -49,6 +49,11 @@ export default class SingleCampus extends Component {
               Delete this campus forever?
             </button>
           </Link>
+          <div>
+            <Link to={`/CampusList/${CampusId}/UpdateCampus`}>
+            <button> Update Campus? </button>
+            </Link>
+            </div>
         </div>
       </div>
     );
