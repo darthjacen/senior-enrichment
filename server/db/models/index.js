@@ -13,7 +13,7 @@ const db = require('../index');
 // This is also probably a good place for you to set up your associations
 
 student.belongsTo(campus);
-campus.hasMany(student);
+campus.hasMany(student, { onDelete: 'cascade', hooks: true });
 module.exports = db
 module.exports = student
 module.exports = campus

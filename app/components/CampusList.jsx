@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import NewCampusForm from './NewCampusForm';
 
 export default class CampusList extends Component {
   constructor() {
@@ -20,6 +21,12 @@ export default class CampusList extends Component {
     return (
       <div>
         <h1 className='title' > Campuses </h1>
+        <Link to="/NewCampusForm" >
+        <div>
+          <button>Create New Campuse
+            </button>
+            </div>
+            </Link>
         {
             <div>
           {this.state.campuses.map(campus => {
